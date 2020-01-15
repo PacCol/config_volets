@@ -1,6 +1,6 @@
 #ifndef PROTOTYPE_H
 #define PROTOTYPE_H
 
-//extern void programmer();
+extern void programmer();
 
 #endif

@@ -5,6 +5,7 @@
 
 #include <gtkmm/button.h>
 #include <gtkmm/window.h>
+#include <gtkmm/main.h>
 #include <gtkmm/buttonbox.h>
 #include <gtkmm/entry.h>
 #include <gtkmm/messagedialog.h>
@@ -12,9 +13,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-class Fenetre : public Gtk::Window {
+class FenetreIp : public Gtk::Window {
     public :
-        Fenetre();
+        FenetreIp();
     private :
         Gtk::Button bouton_ok;
     protected :

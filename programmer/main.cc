@@ -3,7 +3,7 @@
 #include "Fenetre.h"
 #include "../prototype.h"
 
-void set_ip(){
-    FenetreIp fenetre;
+void programmer(){
+    Fenetre fenetre;
     Gtk::Main::run(fenetre);
 }

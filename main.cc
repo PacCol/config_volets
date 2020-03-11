@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
         Gtk::Button boutonIp("Définir l'adresse IP");
         boutonIp.set_can_focus(false);
 
-        //boiteBoutonsH.pack_start(boutonHeure);
+        boiteBoutonsH.pack_start(boutonHeure);
         boiteBoutonsH.pack_start(boutonOuvrir);
         boiteBoutonsH.pack_start(boutonFermer);
         boiteBoutonsH.pack_start(boutonIp);

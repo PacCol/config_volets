@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
 
         Gtk::Main app(argc, argv);
         Gtk::Window fenetre;
-        fenetre.set_title("Configuration des volets");
+        fenetre.set_title("Configuration des volets (v1.0.0 beta)");
         fenetre.set_icon_from_file("icone.png");
         fenetre.set_size_request(300, 80);
         fenetre.set_resizable(false);

@@ -20,10 +20,13 @@ unsigned int send_post_request(char* ip, char* action) {
 	curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);
 
 	if ((strcmp(action,"ouvrir")) == 0) {
-		curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"action\":\"ouvrir\"}");
+		curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"action\":\"open\"}");
 	}
 	else if ((strcmp(action,"fermer")) == 0) {
-		curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"action\":\"fermer\"}");
+		curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"action\":\"close\"}");
+	}
+	else if ((strcmp(action,"programmer_soleil")) == 0) {
+		curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"action\":\"set_hour_sunrise_sunset\"}");
 	}
 
 	curl_easy_setopt(hnd, CURLOPT_TIMEOUT, 4L);
@@ -54,10 +57,10 @@ unsigned int programmer_heure(char* ip, int activation, int heure_ouverture, int
 	curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);
 
 	if (activation == 0) {
-		curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"action\":\"programmer_false\"}");
+		curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, "{\"action\":\"set_hour_false\"}");
 	}
 	else {
-		char requete[42] = "{\"action\":\"programmer_true(";
+		char requete[42] = "{\"action\":\"set_hour_true(";
 		char heure[2];
 		sprintf(heure, "%d", heure_ouverture);
 		strcat(requete, heure);

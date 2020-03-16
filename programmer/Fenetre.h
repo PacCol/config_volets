@@ -21,7 +21,8 @@ class Fenetre : public Gtk::Window {
     public :
         Fenetre();
     private :
-        Gtk::CheckButton case_a_cocher_activer;
+        Gtk::CheckButton case_a_cocher_activer_heure;
+        Gtk::CheckButton case_a_cocher_activer_auto;
         Gtk::Button bouton_ok;
         Gtk::Label ouverture;
         Gtk::Label fermeture;
@@ -34,7 +35,8 @@ class Fenetre : public Gtk::Window {
         Gtk::SpinButton heure_fermeture;
         Gtk::SpinButton minute_fermeture;
     protected :
-        void afficher_les_selecteurs();
+        void case_heure();
+        void case_auto();
         void valider();
         Gtk::Table tableau;
 };

@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
 
         Gtk::Main app(argc, argv);
         Gtk::Window fenetre;
-        fenetre.set_title("Configuration des volets (v1.0.0 beta)");
+        fenetre.set_title("Configuration des volets (v2.0 beta)");
         fenetre.set_icon_from_file("icone.png");
         fenetre.set_size_request(300, 80);
         fenetre.set_resizable(false);
@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 
         Gtk::HButtonBox boiteBoutonsH(Gtk::BUTTONBOX_SPREAD, 10);
 
-        Gtk::Button boutonHeure("Programmer une heure");
+        Gtk::Button boutonHeure("Programmer les volets");
         boutonHeure.set_can_focus(false);
         Gtk::Button boutonOuvrir("Ouvrir les volets");
         boutonOuvrir.set_can_focus(false);
